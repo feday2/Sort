@@ -1,0 +1,17 @@
+{
+  "name": "feday2/sort",
+  "description": "sort array desc and asc",
+  "type": "library",
+  "authors": [
+      {
+        "name": "feday2",
+        "email": "feday2@gmail.com"
+      }
+  ],
+  "autoload": {
+    "psr-4": {
+        "Feday2\\Sort\\": "src/"
+    }
+  },
+  "license": "MIT"
+}
