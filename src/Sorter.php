@@ -24,8 +24,6 @@ final class Sorter
 
     public function Sort(array $array): array
     {
-        $test = [12, 123, 123213, 'asfdas' => 'adsfas'];
-
         return $this->sortType->sort($array);
     }
 }
