@@ -8,12 +8,10 @@ declare(strict_types=1);
 
 namespace Feday2\Sort;
 
-final class SortAsc implements SortInterface
+final class SortNull implements SortInterface
 {
     public function sort(array $array): array
     {
-        \sort($array);
-
         return $array;
     }
 }

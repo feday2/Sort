@@ -8,10 +8,17 @@
         "email": "feday2@gmail.com"
       }
   ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.14"
+  },
   "autoload": {
     "psr-4": {
         "Feday2\\Sort\\": "src/"
     }
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "cs-check": "php-cs-fixer fix --allow-risky=yes --diff --ansi --dry-run",
+    "cs-fix": "php-cs-fixer fix --allow-risky=yes --diff --ansi"
+  }
 }

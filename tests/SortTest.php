@@ -1,11 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the "Feday2\Sort" package.
+ */
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Feday2\Sort\{Sort, SortAsc, SortDesc};
+use Feday2\Sort\{Sorter, SortAsc, SortDesc, SortNull};
 
-$testArray = [ 54, 213, 123, 'banana'];
+$testArray = [54, 213, 'banana', 123];
 
-$sorting = new Sort(new SortDesc);
-$array = $sorting->sort($testArray);
-var_dump($array);
+$sortArray = (new Sorter(new SortDesc()))->sort($testArray);
+\var_dump($sortArray);
+
+$sortArray = (new Sorter(new SortAsc()))->sort($testArray);
+\var_dump($sortArray);
+
+$sortArray = (new Sorter(new SortNull()))->sort($testArray);
+\var_dump($sortArray);

@@ -1,34 +1,21 @@
 # Serialize object
-Serialize public properties of object to JSON, YAML or XML
+Sort array using Strategy Pattern
 
 ## Installation ##
 ```bash
-$ git clone https://github.com/feday2/SerializeObject.git && cd SerializeObject
-$ composer install
+$ composer require feday2/sort
 ```
 
 ## Usage ##
 ```php
 <?php
 
-use Feday2\SerializeObject\{SerializeJson, SerializeXml, SerializeYaml};
+use Feday2\Sort\{Sorted, SortDesc};
 
 ...
 
-$serializeJson = new SerializeJson();
-$serializeXml = new SerializeXml();
-$serializeYaml = new SerializeYaml();
+$sortType = new SortDesc();
+$sorter =  new Sorter($sortType);
+$sortedArray = $sorter->sort($array);
 
-$json = $serializeJson->encode($test);
-$xml = $serializeXml->encode($test);
-$yml = $serializeYaml->encode($test);
 ```
-## Support types ##
-Library supports next types of object properties:
-
-* String
-* Integer
-* Double
-* Boolean
-* Array
-* Null
