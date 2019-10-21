@@ -12,17 +12,17 @@ final class Sorter
 {
     private $sortType;
 
-    public function __construct(SortInterface $sortType)
+    public function __construct(SorterInterface $sortType)
     {
         $this->sortType = $sortType;
     }
 
-    public function setSortType(SortInterface $sortType): void
+    public function setSortType(SorterInterface $sortType): void
     {
         $this->sortType = $sortType;
     }
 
-    public function Sort(array $array): array
+    public function sort(array $array): array
     {
         return $this->sortType->sort($array);
     }

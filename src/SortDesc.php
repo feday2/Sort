@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Feday2\Sort;
 
-final class SortDesc implements SortInterface
+final class SortDesc implements SorterInterface
 {
     public function sort(array $array): array
     {

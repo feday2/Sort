@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Feday2\Sort;
 
-final class SortNull implements SortInterface
+final class SortNull implements SorterInterface
 {
     public function sort(array $array): array
     {
